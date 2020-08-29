@@ -3,9 +3,9 @@
 I'm a University freshman at "wink", studying Computer Science and Electrical Engineering, I also do Ethical Hacking on the side and Cyber Security.
 
 ### About me
-Name: Ahmed Khidr
-Gender: Male
-Location: Milkyway
+- Name: Ahmed Khidr
+- Gender: Male
+- Location: Milkyway
 
 ### Education
 
