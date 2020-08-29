@@ -21,4 +21,4 @@ Ahmed Khidr
 - Class Act Events 2019
 ```
 
-[Email me here](mailto:ahmed@barrawi.xyz).
+[Email me here](mailto:ahmed@barrawi.xyz)
