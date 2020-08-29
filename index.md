@@ -19,10 +19,6 @@ Ahmed Khidr
 
 - Vibes Events 2019-2020
 - Class Act Events 2019
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 [Email me here](mailto:ahmed@barrawi.xyz).
