@@ -19,7 +19,7 @@ I'm a High-school Graduate pursuing a degree in Computer Science & Electrical En
 
 - Advanced Skills in Microsoft Windows 10 & Debian Linux
 
-- Microsoft Office & Google Sheets Suite Skills
+- Microsoft Office & Google Docs Suite Skills
 
 - Understanding of code in Java & JavaScript and Basic Coding Skills
 
