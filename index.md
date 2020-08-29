@@ -1,25 +1,33 @@
 ## Welcome to my Github
 
-I'm a University freshman at "wink", studying Computer Science and Electrical Engineering, I also do Ethical Hacking on the side and Cyber Security.
+I'm a Highschool Graduate persuing a degree in Computer Science & Electrical Engineering, I also do Ethical Hacking on the side & Cyber Security.
 
 ### About me
 - Name: Ahmed Khidr
 
 - Gender: Male
 
-- Location: Milkyway
+- Age: 18
 
-### Education
+- Location: U.A.E
 
-- Al Nahda National School for Boys (High School Diploma)
+- Typing Speed: 90 WPM
 
-- "wink" University (Freshman)
+- Languages: English & Arabic
 
-### Work Experience
+### Skills
 
-- Vibes Events 2019-2020
+- Advanced Skills in Microsoft Windows 10 & Debian Linux
 
-- Class Act Events 2019
+- Microsoft Office & Google Sheets Suite Skills
+
+- Understanding of code in Java & JavaScript and Basic Coding Skills
+
+- Advanced Search Engine querrying Skills
+
+- Basic Penetration testing Skills including Nmap & Metasploit
+
+- Git , Version Control , Code Management & File Organization Skills
 
 ### Projects
 
@@ -28,5 +36,15 @@ I'm a University freshman at "wink", studying Computer Science and Electrical En
 - [Habbo Hotel Emulator Plugin](https://github.com/Dippys/StaffTools) Maintainer
 
 - [Java Launcher Application for Ampera](https://github.com/Dippys/Ampera-Launcher) Maintainer
+
+### Education
+
+- Al Nahda National School for Boys (High School Diploma)
+
+### Work Experience
+
+- Vibes Events 2019-2020
+
+- Class Act Events 2019
  
 [Email me here](mailto:ahmed@barrawi.xyz)
