@@ -35,7 +35,9 @@ I'm a High-school Graduate pursuing a degree in Computer Science & Electrical En
 
 - [Habbo Hotel Emulator Plugin](https://github.com/Dippys/StaffTools) Maintainer
 
-- [Java Launcher Application for Ampera](https://github.com/Dippys/Ampera-Launcher) Maintainer
+- [Java Launcher Application for Ampera](https://github.com/Dippys/Ampera-Launcher) Creator
+
+- [Habbo Hotel Emulator Plugin 2](https://git.krews.org/SenpaiDipper/Random-Commands) Creator
 
 ### Education
 
