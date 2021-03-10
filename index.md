@@ -9,7 +9,7 @@ I'm a High-school Graduate pursuing a degree in Computer Science & Electrical En
 
 - Age: 18
 
-- Location: U.A.E
+- Location: Tbilisi, Georgia
 
 - Typing Speed: 90 WPM
 
@@ -41,7 +41,8 @@ I'm a High-school Graduate pursuing a degree in Computer Science & Electrical En
 
 ### Education
 
-- Al Nahda National School for Boys (High School Diploma)
+- Al Nahda National School for Boys (High School Diploma) - 2019
+- University Of Georgia (BSC in Engineering) - Current
 
 ### Work Experience
 
