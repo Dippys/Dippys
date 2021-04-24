@@ -7,7 +7,7 @@ I'm a High-school Graduate pursuing a degree in Computer Science & Electrical En
 
 - Gender: Male
 
-- Age: 18
+- Age: 19
 
 - Location: Tbilisi, Georgia
 
