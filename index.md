@@ -1,6 +1,6 @@
 ## Welcome to my Page
 
-I'm a High-school Graduate pursuing a degree in Computer Science & Electrical Engineering, I also do Ethical Hacking on the side & Cyber Security.
+I'm a High-school Graduate pursuing a degree in Computer Science & Electrical Engineering.
 
 ### About me
 - Name: Ahmed Khidr
@@ -17,17 +17,11 @@ I'm a High-school Graduate pursuing a degree in Computer Science & Electrical En
 
 ### Skills
 
-- Advanced Skills in Microsoft Windows 10 & Debian Linux
+- Advanced Skills in Microsoft Windows & Debian Linux
 
-- Microsoft Office & Google Docs Suite Skills
+- Microsoft Office & Google Office Suite Skills
 
-- Understanding of code in Java & JavaScript and Basic Coding Skills
-
-- Advanced Search Engine querying Skills
-
-- Basic Penetration testing Skills including Nmap & Metasploit
-
-- Git, Version Control, Code Management & File Organization Skills
+- Coding Knowleddge of Java, Javascript, C++.
 
 ### Projects
 
