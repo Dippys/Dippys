@@ -7,7 +7,7 @@ I'm a High-school Graduate pursuing a degree in Computer Science & Electrical En
 
 - Gender: Male
 
-- Age: 20
+- Age: 21
 
 - Location: Tbilisi, Georgia
 
@@ -39,6 +39,8 @@ I'm a High-school Graduate pursuing a degree in Computer Science & Electrical En
 - University Of Georgia (BSC in Engineering) - Current
 
 ### Work Experience
+
+- Blazingboost SRL 2022
 
 - Vibes Events 2019-2020
 
