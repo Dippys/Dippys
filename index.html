@@ -1,142 +1,760 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<!-- 
+  👋 Well, well, well... inspector found what they were looking for.
+  
+  This site is built with:
+  • Pure HTML (no frameworks, just semantics)
+  • Vanilla CSS (no preprocessors, just gradients & grids)
+  • Vanilla JS (no dependencies, just vibes)
+  
+  Want to build something cool together? Check the contact section for email.
+  Or check out the source on GitHub: github.com/dippys
+  
+  Pro tip: Open the console and try pressing this sequence:
+  ↑ ↑ ↓ ↓ ← → ← → B A (Konami Code)
+  
+  Made with ❤️ in UAE, 2026
+-->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dippy | AI Integrations Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="AI-focused full-stack engineer building internal tools that automate workflows and increase productivity." />
+  <title>Ahmed Khidr / AI Solutions Engineer</title>
+
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: #f1f5f9;
+    :root{
+      --bg:#0b0f17;
+      --panel:#0f1626;
+      --panel2:#0c1322;
+      --text:#e8eefc;
+      --muted:#a7b4d6;
+      --border:rgba(255,255,255,.08);
+      --shadow: 0 12px 35px rgba(0,0,0,.35);
+      --radius:18px;
+      --radius2:14px;
+      --max:1120px;
+      --pad:24px;
+      --pad2:18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
-    header {
-      background: #1e293b;
-      padding: 2rem;
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background: radial-gradient(1200px 800px at 10% 10%, rgba(120, 170, 255,.18), transparent 55%),
+                  radial-gradient(1000px 700px at 90% 20%, rgba(155, 120, 255,.14), transparent 55%),
+                  radial-gradient(900px 650px at 50% 100%, rgba(120, 255, 210,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit; text-decoration:none}
+    a.underline{text-decoration:underline; text-underline-offset:3px}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad)}
+    .grid{display:grid; gap:18px}
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:10px 14px; border:1px solid var(--border); border-radius:999px;
+      background:rgba(255,255,255,.03);
+      box-shadow: 0 1px 0 rgba(255,255,255,.06) inset;
+      color:var(--muted);
+      font-size:14px;
+      backdrop-filter: blur(10px);
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background:rgba(120,255,210,.9); box-shadow:0 0 18px rgba(120,255,210,.6)}
+    .btnrow{display:flex; flex-wrap:wrap; gap:12px; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      box-shadow: 0 1px 0 rgba(255,255,255,.08) inset;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      font-weight:600;
+      font-size:14px;
+    }
+    .btn:hover{transform: translateY(-1px); background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(120,170,255,.35), rgba(155,120,255,.25));
+      border-color: rgba(150,170,255,.30);
+    }
+    .btn.primary:hover{background: linear-gradient(135deg, rgba(120,170,255,.45), rgba(155,120,255,.30))}
+    .btn .icon{font-family:var(--mono); opacity:.9}
+
+    /* NAV */
+    header{
+      position:sticky; top:0; z-index:20;
+      background: linear-gradient(to bottom, rgba(11,15,23,.88), rgba(11,15,23,.65));
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(120,255,210,.75), rgba(120,170,255,.55), rgba(155,120,255,.60));
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    nav a{
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+      padding:10px 12px;
+      border-radius:10px;
+      transition: background .12s ease, color .12s ease;
+    }
+    nav a:hover{background:rgba(255,255,255,.04); color:var(--text)}
+    .navlinks{display:flex; gap:2px; flex-wrap:wrap}
+    .navright{display:flex; align-items:center; gap:10px}
+    .small{font-size:13px; color:var(--muted)}
+
+    /* HERO */
+    .hero{
+      padding:48px 0 26px;
+    }
+    .heroCard{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .heroInner{
+      padding:30px;
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:22px;
+    }
+    .glow{
+      position:absolute; inset:-40px -40px auto auto;
+      width:420px; height:420px; border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, rgba(120,255,210,.25), transparent 60%),
+                  radial-gradient(circle at 70% 70%, rgba(120,170,255,.22), transparent 55%),
+                  radial-gradient(circle at 40% 80%, rgba(155,120,255,.18), transparent 60%);
+      filter: blur(6px);
+      pointer-events:none;
+      opacity:.9;
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(28px, 4.2vw, 44px);
+      line-height:1.12;
+      letter-spacing:-.6px;
+    }
+    .lead{
+      color:var(--muted);
+      font-size:16px;
+      margin:0;
+      max-width: 62ch;
+    }
+    .meta{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:18px;
+    }
+    .kpiGrid{
+      display:grid; gap:12px;
+      align-content:start;
+    }
+    .stat{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:var(--radius2);
+      padding:14px;
+    }
+    .stat .num{
+      font-weight:900;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .stat .lbl{
+      margin-top:4px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* SECTIONS */
+    section{padding:22px 0}
+    .sectionTitle{
+      display:flex; align-items:baseline; justify-content:space-between;
+      gap:12px;
+      margin: 10px 0 12px;
+    }
+    .sectionTitle h2{
+      margin:0;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .sectionTitle .hint{color:var(--muted); font-size:13px}
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+    .card{
+      grid-column: span 6;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background: rgba(255,255,255,.03);
+      box-shadow: 0 1px 0 rgba(255,255,255,.06) inset;
+      padding:18px;
+    }
+    .card.full{grid-column: span 12;}
+    .card h3{
+      margin:0 0 6px;
+      font-size:15px;
+      letter-spacing:.2px;
+    }
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+    .tag{
+      font-size:12px;
+      color:rgba(232,238,252,.92);
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.02);
+    }
+
+    /* TIMELINE */
+    .timeline{
+      display:grid;
+      gap:12px;
+    }
+    .role{
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background: rgba(255,255,255,.03);
+      padding:18px;
+    }
+    .roleTop{
+      display:flex; align-items:flex-start; justify-content:space-between; gap:14px;
+      flex-wrap:wrap;
+    }
+    .role h3{margin:0; font-size:15px}
+    .role .where{color:var(--muted); font-size:13px; margin-top:4px}
+    .role .when{
+      font-family:var(--mono);
+      font-size:12px;
+      color:rgba(167,180,214,.9);
+      padding:8px 10px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:rgba(0,0,0,.18);
+      white-space:nowrap;
+      height:fit-content;
+    }
+    .role p{margin:12px 0 0; color:var(--muted); font-size:14px}
+
+    /* PROJECTS */
+    .project{
+      grid-column: span 4;
+      min-height: 170px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .project .top p{margin-top:8px}
+    .project .links{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .project .links a{
+      color:rgba(232,238,252,.92);
+      font-weight:650;
+      font-size:13px;
+      padding:9px 10px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:rgba(255,255,255,.02);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .project .links a:hover{transform: translateY(-1px); background:rgba(255,255,255,.05); border-color:rgba(255,255,255,.14)}
+
+    /* FOOTER */
+    footer{
+      padding:30px 0 44px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .foot{
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;
+      border-top:1px solid var(--border);
+      padding-top:16px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 920px){
+      .heroInner{grid-template-columns:1fr; padding:22px}
+      .card{grid-column: span 12}
+      .project{grid-column: span 6}
+    }
+    /* Easter egg modal */
+    .easter-egg-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(11, 15, 23, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .easter-egg-modal.active {
+      display: flex;
+    }
+
+    .easter-egg-content {
       text-align: center;
+      color: #e8eefc;
+      animation: scaleIn 0.4s ease;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+
+    .easter-egg-content h2 {
+      font-size: 48px;
+      margin: 0 0 20px;
+      background: linear-gradient(135deg, #78aaff, #78ffd2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.2rem;
+
+    .easter-egg-content p {
+      font-size: 18px;
+      color: #a7b4d6;
+      margin: 10px 0;
     }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+
+    .easter-egg-content .secret-text {
+      margin-top: 30px;
+      padding: 20px;
+      background: rgba(120, 170, 255, 0.1);
+      border: 1px solid rgba(120, 255, 210, 0.3);
+      border-radius: 12px;
+      font-family: monospace;
+      color: #78ffd2;
     }
-    section {
-      margin-bottom: 2rem;
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-    h2 {
-      border-bottom: 2px solid #475569;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    ul li::before {
-      content: "\2022";
-      color: #38bdf8;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #94a3b8;
-    }
-    .badge {
-      display: inline-block;
-      margin: 0.25rem 0.5rem;
-      padding: 0.4rem 0.7rem;
-      background: #334155;
-      border-radius: 1rem;
-      font-size: 0.9rem;
+
+    @keyframes scaleIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
+
 <body>
+  <div class="easter-egg-modal" id="easterEggModal">
+    <div class="easter-egg-content">
+      <h2>✨ You found it! ✨</h2>
+      <p>You're the type of person who explores.</p>
+      <p>I appreciate that.</p>
+      <div class="secret-text">
+        <p>Let's build something cool together.</p>
+        <p style="margin-top:15px;color:#78aaff;" id="secretEmail">📧 [email hidden]</p>
+      </div>
+      <p style="margin-top:30px;font-size:14px;color:#a7b4d6;cursor:pointer;" onclick="document.getElementById('easterEggModal').classList.remove('active')">Click anywhere to close</p>
+    </div>
+  </div>
+
   <header>
-    <h1>👋 Hey, I'm Dippy</h1>
-    <p>AI Integrations Engineer · Toolmaker · Lifelong Learner</p>
-    <p><a href="https://barrawi.xyz" target="_blank">barrawi.xyz</a> | <a href="https://github.com/Dippys" target="_blank">@Dippys</a></p>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <div>
+            <div>Ahmed Khidr</div>
+            <div class="small">AI Solutions Engineer • Full-Stack • Automation</div>
+          </div>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="navright">
+          <a class="btn" id="nav-email" href="#" title="Email">
+            <span class="icon">✉</span> Email
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>🚀 Current Projects</h2>
-      <ul>
-        <li>🤖 AI Livechat Training for Companies – Custom GPT models trained for support workflows</li>
-        <li>🌐 AI-Powered Web Scraping Website – LLM-enhanced scrapers with smart summarization</li>
-        <li>👥 AI HR Employee Tracking Software – Internal tool for performance and behavior tracking</li>
-        <li>⚙️ Discord-Bot-Template – Modular TypeScript bot with Express backend and MySQL</li>
-        <li>🧪 AMS-CLI – Plugin manager CLI for Arcturus emulator with live updates</li>
-      </ul>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="wrap">
+        <div class="heroCard">
+          <div class="glow" aria-hidden="true"></div>
+          <div class="heroInner">
+            <div>
+              <span class="pill"><span class="dot" aria-hidden="true"></span> Available for AI / Full-Stack roles (remote / UAE)</span>
+              <h1>Building AI-powered web tools that automate work and boost productivity.</h1>
+              <p class="lead">
+                I design and ship end-to-end internal web applications with embedded AI / turning manual workflows into fast,
+                reliable systems. Comfortable owning architecture, product thinking, and delivery.
+              </p>
+
+              <div class="meta">
+                <span class="pill">📍 Al Ain, UAE</span>
+                <span class="pill">🧠 Applied AI / LLMs</span>
+                <span class="pill">⚙️ Automation & systems</span>
+              </div>
+
+              <div class="btnrow">
+                <a class="btn primary" href="#projects"><span class="icon">↳</span> See projects</a>
+                <a class="btn" id="hero-email" href="#"><span class="icon">✉</span> Contact me</a>
+                <a class="btn" href="https://raw.githubusercontent.com/Dippys/Dippys/refs/heads/gh-pages/AhmedKhidr-CV.pdf"><span class="icon">⬇</span> Download CV</a>
+                <a class="btn" href="https://github.com/dippys/"><span class="icon">{ }</span> GitHub</a>
+              </div>
+            </div>
+
+            <div class="kpiGrid" aria-label="Highlights">
+              <div class="stat">
+                <div class="num">AI + Full-Stack</div>
+                <div class="lbl">End-to-end delivery (frontend, backend, integration)</div>
+              </div>
+              <div class="stat">
+                <div class="num">Automation</div>
+                <div class="lbl">Replacing manual workflows with internal tools</div>
+              </div>
+              <div class="stat">
+                <div class="num">Ownership</div>
+                <div class="lbl">Independently ship production web apps</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>🧠 Skills & Stack</h2>
-      <ul>
-        <li>Languages: TypeScript, JavaScript, Python, Java, Bash</li>
-        <li>Backends: Node.js, Express.js, REST APIs, WebSocket</li>
-        <li>Databases: MySQL, SQLite</li>
-        <li>AI Tools: LangChain, OpenAI SDK, Hugging Face Transformers</li>
-        <li>Frontend: Electron, EJS, TailwindCSS</li>
-        <li>Tools: Git, GitHub, Vercel, CLI Development, Postman</li>
-        <li>Platforms: Discord API, Puppeteer, Playwright, NGINX, Docker</li>
-      </ul>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>About</h2>
+          <div class="hint">What I do and how I work</div>
+        </div>
+
+        <div class="cards">
+          <div class="card full">
+            <h3>Bio</h3>
+            <p>
+              AI-focused full-stack engineer specializing in building internal web applications that automate workflows and improve
+              organizational productivity. Experienced in owning solutions end-to-end / from system design and development to AI
+              integration and deployment / while working independently in fast-moving environments. Background spans project
+              management, operations, and technical leadership, with a strong focus on replacing manual processes through
+              intelligent automation.
+            </p>
+            <div class="tags" aria-label="Core strengths">
+              <span class="tag">Applied AI</span>
+              <span class="tag">Full-Stack</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Internal Tools</span>
+              <span class="tag">Systems Thinking</span>
+              <span class="tag">Productivity</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>📌 Highlights</h2>
-      <ul>
-        <li>🔧 Created and maintain open-source Discord Bot and CLI templates</li>
-        <li>📦 Published scalable scraping utilities with LLM summarization features</li>
-        <li>🧠 Built internal tools for AI HR tracking and smart report generation</li>
-        <li>🌍 Consulted on AI strategy & tools for small businesses</li>
-        <li>📚 Self-taught in full-stack dev and AI application engineering</li>
-      </ul>
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Experience</h2>
+          <div class="hint">Recent roles</div>
+        </div>
+
+        <div class="timeline">
+          <div class="role">
+            <div class="roleTop">
+              <div>
+                <h3>AI Solutions Engineer / BlazingBoost SRL (Remote, Milan)</h3>
+                <div class="where">Designed & built AI-powered internal web apps for automation and productivity</div>
+              </div>
+              <div class="when">2025 / Present</div>
+            </div>
+            <p>
+              Designed and developed end-to-end AI-powered web applications to automate previously manual workflows.
+              Worked independently with significant ownership over system architecture, backend and frontend development,
+              and AI integration, shipping internal tools that streamline operations and reduce manual effort.
+            </p>
+          </div>
+
+          <div class="role">
+            <div class="roleTop">
+              <div>
+                <h3>Coordination Manager / Paradoxa AI (Remote, Dubai)</h3>
+                <div class="where">Remote operations, account security, reporting, and rapid issue resolution</div>
+              </div>
+              <div class="when">2024 / 2025</div>
+            </div>
+            <p>
+              Managed remote coordination operations for large-scale social media workflows, overseeing team performance,
+              account security, reporting, and issue resolution while improving efficiency and reducing operational friction.
+            </p>
+          </div>
+
+          <div class="role">
+            <div class="roleTop">
+              <div>
+                <h3>Project Manager / BlazingBoost SRL (Remote, Milan)</h3>
+                <div class="where">Agile delivery, stakeholder alignment, and building internal tooling</div>
+              </div>
+              <div class="when">2021 / 2024</div>
+            </div>
+            <p>
+              Managed Agile software projects across design, engineering, and stakeholders, improving delivery efficiency and
+              reducing scope creep, while supporting technical operations and building internal tools to automate CRM and
+              sales workflows.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>📫 Contact & Links</h2>
-      <ul>
-        <li>🌐 Website: <a href="https://barrawi.xyz" target="_blank">barrawi.xyz</a></li>
-        <li>🐙 GitHub: <a href="https://github.com/Dippys" target="_blank">@Dippys</a></li>
-        <li>📧 Email: ahmed @ domain ;)</li>
-        <li>🔗 Projects, ideas, and consulting: Reach out through GitHub or my email</li>
-      </ul>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Projects</h2>
+          <div class="hint">Recent work / internal tools & platforms</div>
+        </div>
+
+        <div class="cards">
+          <div class="card project">
+            <div class="top">
+              <h3>AI-Powered Livechat Training Platform</h3>
+              <p>
+                Fully automated internal platform for training employees on customer livechat using AI as the simulated customer. Features scenario creation, real-time scoring, and performance analytics for continuous improvement.
+              </p>
+              <div class="tags">
+                <span class="tag">AI / LLMs</span><span class="tag">Internal Tool</span><span class="tag">Training</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card project">
+            <div class="top">
+              <h3>Custom HR ATS Platform</h3>
+              <p>
+                Fully featured HR recruitment platform with deep AI integration. Automatically analyzes applicants, intelligently sorts and filters candidates, and manages complete hiring pipelines from application to onboarding.
+              </p>
+              <div class="tags">
+                <span class="tag">AI / LLMs</span><span class="tag">Full-Stack</span><span class="tag">HR / Recruiting</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card project">
+            <div class="top">
+              <h3>Company Intelligent Chatbot Assistant</h3>
+              <p>
+                Enterprise RAG-powered chatbot with full company knowledge integration, persistent memory, and advanced capabilities. Accesses internal task platforms, collaborates with team members, executes complex workflows, and researches the internet.
+              </p>
+              <div class="tags">
+                <span class="tag">RAG / AI</span><span class="tag">Knowledge Base</span><span class="tag">Automation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>💬 About Me</h2>
-      <p>
-        I'm a full-time AI Integrations Engineer based in the UAE. My focus is bridging backend systems with AI features to make everyday tools smarter and more efficient. From Discord bots and scrapers to HR automation and AI livechat systems, I build to solve real-world problems using bleeding-edge tech.
-      </p>
-      <p>
-        I'm always learning and experimenting with the latest in LLMs, agent workflows, and API-driven automation. I believe in open-source, clean code, and sharing tools that help other developers go faster.
-      </p>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Skills</h2>
+          <div class="hint">Focused list (6)</div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>AI / LLM Integration</h3>
+            <p>Embedding AI into real workflows: prompts, tools, guardrails, eval mindset.</p>
+          </div>
+          <div class="card">
+            <h3>Full-Stack Web Development</h3>
+            <p>Building complete web apps from UI to backend services and deployments.</p>
+          </div>
+          <div class="card">
+            <h3>Workflow Automation & Internal Tools</h3>
+            <p>Replacing manual tasks with reliable systems, dashboards, and integrations.</p>
+          </div>
+          <div class="card">
+            <h3>System Architecture & API Design</h3>
+            <p>Designing scalable services, clean APIs, and maintainable app structure.</p>
+          </div>
+          <div class="card">
+            <h3>Agile Project Management</h3>
+            <p>Planning, prioritizing, and shipping iteratively with stakeholders.</p>
+          </div>
+          <div class="card">
+            <h3>Process Optimization</h3>
+            <p>Measuring friction, improving reliability, and increasing productivity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Contact</h2>
+          <div class="hint">Let’s build something useful</div>
+        </div>
+
+        <div class="cards">
+          <div class="card full">
+            <h3>Reach me</h3>
+            <p>
+              Email is best. If you want, include a short problem statement and what success looks like / I'll reply with an approach.
+            </p>
+            <div class="btnrow">
+              <a class="btn primary" id="contact-email" href="#"><span class="icon">✉</span> <span id="email-display">Email</span></a>
+              <a class="btn" href="https://www.linkedin.com/in/dippys/"><span class="icon">in</span> LinkedIn</a>
+              <a class="btn" href="https://github.com/dippys/"><span class="icon">gh</span> GitHub</a>
+            </div>
+            <div class="small" style="margin-top:12px;">
+              Phone (optional): <span style="font-family:var(--mono);" id="phone-display">Contact for details</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>“Build tools you wish existed. Automate the boring. Scale the fun.”</p>
-    <p>© 2025 Dippy · Made with 💻 in the UAE</p>
+    <div class="wrap">
+      <div class="foot">
+        <div>© <span id="y"></span> Ahmed Khidr</div>
+        <div class="small">Single-file site • Fast • No frameworks • <span style="cursor: help;" title="Try: ↑ ↑ ↓ ↓ ← → ← → B A">👀</span></div>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Encode contact info
+    const contactData = {
+      email: atob('YWhtZWRAYmFycmF3aS54eXo='),
+      phone: atob('Kzk3MSA1MCA4MTYgNzY4Ng==')
+    };
+
+    // Set up email links
+    const emailLinks = document.querySelectorAll('#nav-email, #hero-email, #contact-email');
+    emailLinks.forEach(link => {
+      link.href = 'mailto:' + contactData.email;
+    });
+
+    // Display decoded email and phone
+    const emailDisplay = document.getElementById('email-display');
+    if (emailDisplay) emailDisplay.textContent = contactData.email;
+    
+    const phoneDisplay = document.getElementById('phone-display');
+    if (phoneDisplay) phoneDisplay.textContent = contactData.phone;
+
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Easter eggs
+    // 1. Console message
+    console.log(`
+%c 🚀 Welcome to Ahmed's portfolio!
+%c Built with pure HTML, CSS & JS • No frameworks needed
+%c Looking for talented engineers? Reach out: ahmed@barrawi.xyz
+    `, 'font-size:16px;font-weight:bold;color:#78aaff', 'font-size:12px;color:#a7b4d6', 'font-size:12px;color:#78ffd2;font-weight:bold');
+
+    // 2. Konami code detector
+    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    let konamiIndex = 0;
+    
+    // Win sound effect using Web Audio API
+    function playWinSound() {
+      try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const now = audioContext.currentTime;
+        
+        // Create the "win" sound - a rising tone
+        const osc = audioContext.createOscillator();
+        const gain = audioContext.createGain();
+        
+        osc.connect(gain);
+        gain.connect(audioContext.destination);
+        
+        // Sweep from 400Hz to 800Hz
+        osc.frequency.setValueAtTime(400, now);
+        osc.frequency.exponentialRampToValueAtTime(800, now + 0.3);
+        
+        gain.gain.setValueAtTime(0.3, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+        
+        osc.start(now);
+        osc.stop(now + 0.3);
+      } catch (e) {
+        // Fallback if Web Audio API not available
+      }
+    }
+    
+    document.addEventListener('keydown', (e) => {
+      const konamiKey = konamiCode[konamiIndex];
+      const pressedKey = e.key;
+      
+      let match = false;
+      if (pressedKey.startsWith('Arrow')) {
+        match = pressedKey === konamiKey;
+      } else {
+        match = pressedKey.toLowerCase() === konamiKey.toLowerCase();
+      }
+      
+      if (match) {
+        konamiIndex++;
+        if (konamiIndex === konamiCode.length) {
+          playWinSound();
+          // Reveal email in easter egg
+          document.getElementById('secretEmail').textContent = contactData.email;
+          document.getElementById('easterEggModal').classList.add('active');
+          konamiIndex = 0;
+        }
+      } else {
+        konamiIndex = 0;
+      }
+    });
+
+    // Close modal on background click
+    document.getElementById('easterEggModal').addEventListener('click', (e) => {
+      if (e.target.id === 'easterEggModal') {
+        e.target.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
-
