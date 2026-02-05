@@ -1,60 +1,71 @@
-<h1 align="center">Hey, I'm Dippys 👋</h1>
+# Ahmed Khidr
 
-<p align="center">
-  🤖 Full-Time <strong>AI Integrations Engineer</strong> · 🛠️ Toolmaker · 🎓 Lifelong Learner <br/>
-  🌐 <a href="https://barrawi.xyz" target="_blank">barrawi.xyz</a>
-</p>
+### 🤖 AI Solutions Engineer / Full-Stack Builder
 
----
-
-## 🚀 What I’m Working On
-
-- 🤖 **AI Livechat Training for Companies** — Build and fine-tune custom LLMs to train livechat agents for enterprise workflows  
-- 🌐 **AI-Powered Web Scraping Website** — Scalable tool to scrape and summarize data using LLM pipelines  
-- 👥 **AI HR Employee Tracking Software** — Smart dashboards and AI-driven analysis for employee performance and sentiment
-
----
-
-## 🧠 Tech Stack
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,nodejs,express,electron,python,java,mysql,github,vscode,bash&theme=light" />
-</p>
+Building AI-powered internal tools that automate workflows and increase productivity across organizations.
 
 ---
 
 ## 📊 GitHub Stats
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Dippys&show_icons=true&theme=radical" height="180px"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Dippys&theme=radical" height="180px"/>
-</p>
+![GitHubCard](https://githubcard.com/dippys.svg?d=_m1KcZ9R)
 
 ---
 
-## 🧬 Most Used Languages
+## 🛠️ Tech Stack
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dippys&layout=compact&theme=radical" />
-</p>
-
----
-
-## 🧩 About Me
-
-- 🧠 AI Integrations Engineer crafting real-time apps using LLMs, embeddings & automation  
-- 🛠️ Focused on tools that save time: livechat trainers, scrapers, internal dashboards  
-- 🌍 Based in UAE — always building something clever after hours  
-- 💬 Ask me about LangChain, prompt engineering, or bot design
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 ---
 
-## 📫 Reach Out
+## 🚀 Featured Projects
 
-- 🌐 Website: [barrawi.xyz](https://barrawi.xyz)
-- 💡 Open to AI startup collabs and consulting
-- 📨 Ping me right here on GitHub
+### AI-Powered Livechat Training Platform
+Real-time training system with adaptive learning paths and performance analytics
+- **Tech:** TypeScript, React, Node.js, LangChain
+- **Impact:** 40% faster agent onboarding
+
+### Custom HR ATS Platform
+End-to-end recruitment automation platform with applicant tracking and AI-powered screening
+- **Tech:** TypeScript, Express, React, PostgreSQL
+- **Impact:** Reduced hiring cycle by 50%
+
+### Company Intelligent Chatbot Assistant
+Enterprise chatbot with RAG, multi-language support, and human handoff capabilities
+- **Tech:** Python, LangChain, FastAPI, Pinecone
+- **Impact:** Handles 80% of support queries autonomously
 
 ---
 
-> 🧾 *"Build tools you wish existed. Automate the boring. Scale the fun."*
+## 📈 Contributions
+
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=dippys&theme=tokyo-night&hide_border=true)
+
+---
+
+## 🎯 What I Do
+
+- 🤖 Build AI/ML solutions using LangChain, RAG, and modern LLMs
+- 🎯 Design scalable backend architectures with Node.js & Python
+- 💻 Create responsive, production-grade frontends with React & TypeScript
+- 🐳 Containerize and deploy with Docker & cloud platforms
+- 📊 Optimize performance, security, and user experience
+
+---
+
+## 💬 Let's Connect
+
+- **Portfolio:** [barrawi.xyz](https://barrawi.xyz)
+- **LinkedIn:** [linkedin.com/in/dippys](https://linkedin.com/in/dippys)
+- **Email:** ahmed@barrawi.xyz
+
+---
+
+*Made with ❤️ in UAE | Open to collaboration on AI-powered projects*
